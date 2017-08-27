@@ -3,7 +3,7 @@
 //determine max and minimum shape sizes
 //onclick function sets off random style setter
 
-
+//padding and exr div not neccessary
 
 
 
@@ -17,7 +17,9 @@ append to correct div etc
 
 timer toggle Flip boolena?
 
-
+//if timer is off, random setinterval to make shape appear
+//timer on when shape appears, stop when shape is clicked
+repeat
 
 
 
