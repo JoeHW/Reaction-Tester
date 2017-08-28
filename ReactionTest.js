@@ -32,12 +32,26 @@
 //     timerRunning = true;
 
 
+// <div id="timer"></div>
+// <div id ="stop_timer" onclick="clearInterval(timerVar)">Stop time</div>
+
+
+
+let totalSeconds = 0;
+
+let countTimer = () => {
+   ++totalSeconds;
+document.getElementById("timer").innerHTML = totalSeconds
+}
+
+let timerToggle = false;
+let timerVar = setInterval(countTimer, 1000);
 
 
 let randomSize = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return  Math.floor(Math.random() * (max - min + 1)) + min; 
+  return  Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 let colorArray = ['red', 'blue', 'green', 'yellow', 'orange'];

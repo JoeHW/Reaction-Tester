@@ -7,7 +7,19 @@ height: 500px;
 
 }
 
-.fakeshape {
+#timer {
+float: left;
+height: 59.44px;
+margin-top: 20px;
+}
 
-  
+#timetext {
+
+width: 150px;
+float: left;
+}
+
+#canvas {
+
+  margin-top: 40px;
 }
