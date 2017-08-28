@@ -1,20 +1,3 @@
-let timerVar;
-const time = () => {
-  if(timerToggle){
-  timerVar = setInterval(countTimer, 1000);
-} else {
-  clearInterval(timerVar);
-  totalSeconds = 0
-  document.getElementById("timer").innerHTML = totalSeconds;
-  }
-};
-
-let totalSeconds = 0;
-
-let countTimer = () => {
-   ++totalSeconds;
-   document.getElementById("timer").innerHTML = totalSeconds
-};
 
 let timerToggle = false;
 let needShape = true;
@@ -43,22 +26,25 @@ newShape.style.marginLeft = "" + randomSize(50,300) + "px";
 shapeBox.appendChild(newShape);
 //document.body.insertBefore(newShape, shapeBox);
 timerToggle = true;
-time();
+let start = new Date().getTime();
 
 let clickedShape = document.getElementById("shape");
 clickedShape.addEventListener('click', () => {
 clickedShape.parentNode.removeChild(clickedShape);
+let end = new Date().getTime();
+let timeTaken =  (end - start)/1000;
+document.getElementById("timer").innerHTML = timeTaken;
 timerToggle = false;
-time();
 needShape = true;
  });
 };
 
 const newGenerator = () => {
-  let start;
-  if(needShape){
-  start = setInterval(shapeGenerator, randomSize(2000, 5000));
+  let begin = () => {setInterval(shapeGenerator, randomSize(2000, 5000))}
+  if(!needShape){return;}
+  else {
   needShape = false;
+  begin();
 }};
 
 
