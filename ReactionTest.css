@@ -1,25 +1,33 @@
-.pixelborder {
+#pixelborder {
 
-background-color: red;
-width: 100%;
-height: 500px;
-
-
+  width: 100%;
+  height: 500px;
 }
 
 #timer {
-float: left;
-height: 59.44px;
-margin-top: 20px;
+
+  float: left;
+  height: 59.44px;
+  margin-top: 20px;
+
 }
 
 #timetext {
 
-width: 150px;
-float: left;
+  width: 150px;
+  float: left;
+
 }
 
 #canvas {
 
   margin-top: 40px;
+
+}
+
+#container {
+
+  margin-top: 30px;
+  position: absolute;
+
 }
